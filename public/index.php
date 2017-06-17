@@ -1,22 +1,16 @@
-<!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<?php
+require_once('../private/initialize.php');
+$page_title = 'BMDConnect';
+include(SHARED_PATH . '/header.php');
+?>
 
-<title>BMDConnect</title>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="./styles/style.css">
-
-<body>
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-red w3-card-2 w3-left-align w3-small">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-center w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="index.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Us</a>
-    <a href="participant.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sign Up / Login</a>
+    <!--<a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>-->
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Us</a>
+    <a href="../participant.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sign Up / Login</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Donations</a>
   </div>
 
@@ -31,7 +25,6 @@
 <!-- Header -->
 <header class="w3-container w3-red w3-center" style="padding:128px 16px">
   <h1 class="w3-margin w3-jumbo">BMDConnect</h1>
-  <!--<p class="w3-xlarge w3-italics">Change a Life</p> -->
   <button class="w3-button w3-green w3-padding-large w3-large w3-margin-top">Get Started</button>
 </header>
 
@@ -58,18 +51,4 @@
 </div>
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity">
-  <div class="w3-xlarge w3-padding-32">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
- </div>
-</footer>
-
-<script type="text/javascript" src="./scripts/script.js"></script>
-
-</body>
-</html>
+<?php include(SHARED_PATH . '/footer.php'); ?>
