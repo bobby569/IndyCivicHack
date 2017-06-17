@@ -52,7 +52,8 @@ if(is_post_request() && request_is_same_domain()) {
 <div id="main-content">
     <a href="../index.php">Home</a><br><br>
 
-    <h1>New User</h1>
+    <h1>Welcome!</h1>
+    <h4>New Organization Sign Up</h4>
 
     <?php echo display_errors($errors); ?>
 

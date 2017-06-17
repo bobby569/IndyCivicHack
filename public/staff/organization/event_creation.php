@@ -50,26 +50,6 @@ if(is_post_request() && request_is_same_domain()) {
 <?php $page_title = 'Create Event'; ?>
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
 
-<div id="main-content">
-    <form action="event_creation.php" method="post">
-        <?php echo csrf_token_tag(); ?>
-        Title:<br />
-        <input type="text" name="title" value="<?php echo h($event['title']); ?>" /><br />
-        Summary:<br />
-        <input type="text" name="summary" value="<?php echo h($event['summary']); ?>" /><br />
-        Date &amp; Time:<br />
-        <input type="text" name="datetime" value="<?php echo h($event['datetime']); ?>" /><br />
-        Location:<br />
-        <input type="text" name="email" value="<?php echo h($event['email']); ?>" /><br />
-        Password:<br />
-        <input type="password" name="password" value="" /><br />
-        Confirm Password:<br />
-        <input type="password" name="password_confirm" value="" /><br />
-        <br />
-        <input type="submit" name="submit" value="Create" />
-    </form>
-</div>
-
 <div class="w3-row-padding w3-padding-64 w3-container">
     <div class="w3-content">
         <div class="w3-left">
@@ -78,34 +58,42 @@ if(is_post_request() && request_is_same_domain()) {
             <?php echo display_errors($errors); ?>
 
             <div>
-                <form id="organisation"  method="post" action="event_creation.php" name="event">
+                <form id="organisation" action="event_creation.php" method="post" name="event">
+                    <?php echo csrf_token_tag(); ?>
                     <p>
                         <label>
-                            Title:<input name="TITLE" autofocus required placeholder="Enter title here" type="text">
+                            Title: <br />
+                            <input type="text" name="title" value="<?php echo h($event['title']); ?>" autofocus required />
                         </label>
                     </p>
                     <p>
                         <label>
-                            Summary:<textarea name="SUMMARY" autofocus required placeholder="Enter summary here" rows="4" cols="50"></textarea>
+                            Summary: <br />
+                            <textarea name="summary"  placeholder="Summary about the event" rows="4" cols="50" autofocus required></textarea>
                         </label>
                     </p>
                     <p>
                         <label>
-                            Image:<input  name="IMAGE" autofocus required placeholder="Enter image" type="file">
+                            Time: <br />
+                            <input type="time" name="datetime" placeholder="Enter time" autofocus required />
                         </label>
                     </p>
                     <p>
                         <label>
-                            Location:<input name="LOCATION" autofocus required placeholder="Enter location here" type="text"></label>
-                    </p>
-                    <p>
-                        <label>
-                            Time:<input name="E_TIME" autofocus required placeholder="Enter time here" type="time">
+                            Location: <br />
+                            <input type="text" name="location" value="<?php echo h($event['location']); ?>" autofocus required />
                         </label>
                     </p>
                     <p>
                         <label>
-                            #Participants/Volunteers wanted:<input name="TOTAL_SPOT" autofocus required placeholder= "Enter number of participants/volunteers" type="number">
+                            Image: <br />
+                            <input type="file"  name="imgURL" placeholder="Upload Image"  autofocus />
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            #Participants/Volunteers wanted: <br />
+                            <input type="number" name="tspot" value="<?php echo h($event['tspot']); ?>"  autofocus required />
                         </label>
                     </p>
                     <button type="submit" class="w3-right">Submit</button>

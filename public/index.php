@@ -25,6 +25,16 @@ include(SHARED_PATH . '/header.php');
       text-align: center;
   }
 </style>
+<style>
+    button.jump {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+    }
+    button:hover {
+        cursor: pointer;
+    }
+</style>
 <!-- Header -->
 <header class="w3-container w3-red w3-center" style="padding:128px 16px">
   <h1 class="w3-margin w3-jumbo">BMDConnect</h1>
@@ -83,10 +93,10 @@ include(SHARED_PATH . '/header.php');
     <div class="w3-right">
       <table>
         <tr>
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
-          <td>4</td>
+          <td><button class="jump">1</button></td>
+          <td><button class="jump">2</button></td>
+          <td><button class="jump">3</button></td>
+          <td><button class="jump">4</button></td>
         </tr>
       </table>
     </div>
