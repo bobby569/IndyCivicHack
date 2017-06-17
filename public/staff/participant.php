@@ -8,7 +8,7 @@ include(SHARED_PATH . '/header.php');
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-left">
-      <h1>User Registration</h1>
+      <h1>Participant Registration</h1>
       <div>
         <form id="individual">
             <p>
