@@ -7,7 +7,7 @@
  */
  //UPDATE ORGANISATION TABLE:NUMBER OF SPOTS,
  //List all events that organizer will be hosting
- function findAllCurrentEvents() {
+ function find_all_current-events() {
    global $db;
    $sql = "SELECT * FROM countries ";
    $sql .= "ORDER BY name ASC;";
@@ -15,7 +15,7 @@
    return $country_result;
  }
  //List all events that organizer has hosted in the past
- function findAllPastEvents() {
+ function find_all_past_events() {
    global $db;
    $sql = "SELECT * FROM countries ";
    $sql .= "ORDER BY name ASC;";
@@ -23,7 +23,7 @@
    return $country_result;
  }
  //List selected event info
- function SelectedEvents() {
+ function selected_events() {
    global $db;
    $sql = "SELECT * FROM countries ";
    $sql .= "ORDER BY name ASC;";
@@ -31,6 +31,38 @@
    return $country_result;
  }
  //Set up event
+ function insert_event($organisation) {
+   global $db;
+
+   $errors = validate_organisation($organisation);
+   if (!empty($errors)) {
+     return $errors;
+   }
+
+   $sql = "INSERT INTO EVENT_INFO";
+   $sql .= "O_ID, TITLE, SUMMARY, LOCATION, E_TIME, PHONENUMBER, TOTAL_SPOT)";
+   $sql .= "VALUES (";
+   $sql .= "'" . db_escape($db, $organisation['O_ID']) . "',";
+   $sql .= "'" . db_escape($db, $organisation['TITLE']) . "',";
+   $sql .= "'" . db_escape($db, $organisation['SUMMARY']) . "'";
+   $sql .= "'" . db_escape($db, $organisation['LOCATION']) . "',";
+   $sql .= "'" . db_escape($db, $organisation['E_TIME']) . "',";
+   $sql .= "'" . db_escape($db, $organisation['PHONENUMBER']) . "'";
+   $sql .= "'" . db_escape($db, $organisation['TOTAL_SPOT']) . "'";
+   $sql .= ");";
+   // For INSERT statements, $result is just true/false
+   $result = db_query($db, $sql);
+   if($result) {
+     return true;
+   } else {
+     // The SQL INSERT statement failed.
+     // Just show the error, not the form
+     echo db_error($db);
+     db_close($db);
+     exit;
+   }
+ }
+
  //List selected event info
  function SelectedEvents() {
    global $db;
