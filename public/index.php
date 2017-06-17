@@ -7,7 +7,6 @@ include(SHARED_PATH . '/header.php');
   div.gallery {
       margin: 5px;
       border: 5px solid #ccc;
-      float: center;
       width: 180px;
   }
 
@@ -45,62 +44,100 @@ include(SHARED_PATH . '/header.php');
 <div class="w3-row-padding w3-padding-64 w3-container">
     <div id="events">
       <div>
-        <div class="gallery inline-block">
-        <a target="_blank">
-          <img src="./photos/1.jpg" height="150" width="150">
-        </a>
-          <div class="desc">Volunteer Event</div>
-        </div>
-        <div class="gallery">
-        <a target="_blank">
-          <img src="./photos/2.jpg" height="150" width="150">
-        </a>
-          <div class="desc">Donation</div>
-        </div>
-        <div class="gallery">
-        <a target="_blank">
-          <img src="./photos/3.jpg" height="150" width="150">
-        </a>
-          <div class="desc">Fundraising</div>
-        </div>
-        <div class="gallery">
-        <a target="_blank">
-          <img src="./photos/4.jpg" height="150" width="150">
-        </a>
-          <div class="desc">Change a Life</div>
-        </div>
-        <div class="gallery">
-        <a target="_blank">
-          <img src="./photos/5.jpg" height="150" width="150">
-        </a>
-          <div class="desc">Giving</div>
-        </div>
-        <div class="gallery">
-        <a target="_blank">
-          <img src="./photos/6.jpg" height="150" width="150">
-        </a>
-          <div class="desc">Art of Donations</div>
-        </div>
-        <div class="gallery">
-        <a target="_blank">
-          <img src="./photos/7.jpg" height="150" width="150">
-        </a>
-          <div class="desc">Volunteers Needed!</div>
-        </div>
-        </div>
-    </div>
-
-    <div class="w3-right">
-      <table>
+        <table style="table-layout:fixed;">
         <tr>
-          <td><button class="jump">1</button></td>
-          <td><button class="jump">2</button></td>
-          <td><button class="jump">3</button></td>
-          <td><button class="jump">4</button></td>
+          <td>
+            <div class="gallery">
+              <a target="_blank">
+                <img src="./photos/1.jpg" class="fade_open" height="150" width="150">
+              </a>
+              <div class="desc">Volunteer Event</div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank">
+                <img src="./photos/2.jpg" height="150" width="150">
+              </a>
+              <div class="desc">Volunteer Event</div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank">
+                <img src="./photos/3.jpg" height="150" width="150">
+              </a>
+              <div class="desc">Volunteer Event</div>
+            </div>
+          </td>
         </tr>
-      </table>
+        <tr>
+          <td>
+            <div class="gallery">
+              <a target="_blank">
+                <img src="./photos/1.jpg" height="150" width="150">
+              </a>
+              <div class="desc">Volunteer Event</div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank">
+                <img src="./photos/2.jpg" height="150" width="150">
+              </a>
+              <div class="desc">Volunteer Event</div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank">
+                <img src="./photos/3.jpg" height="150" width="150">
+              </a>
+              <div class="desc">Volunteer Event</div>
+            </div>
+          </td>
+        </tr>
+        </tr>
+        <tr>
+          <td>
+            <div class="gallery">
+              <a target="_blank">
+                <img src="./photos/1.jpg" height="150" width="150">
+              </a>
+              <div class="desc">Volunteer Event</div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank">
+                <img src="./photos/2.jpg" height="150" width="150">
+              </a>
+              <div class="desc">Volunteer Event</div>
+            </div>
+          </td>
+          <td>
+            <div class="gallery">
+              <a target="_blank">
+                <img src="./photos/3.jpg" height="150" width="150">
+              </a>
+              <div class="desc">Volunteer Event</div>
+            </div>
+          </td>
+        </tr>
+        </table>
+      </div>
+
+      <div class="w3-right">
+        <table>
+          <tr>
+            <td><button class="jump">1</button></td>
+            <td><button class="jump">2</button></td>
+            <td><button class="jump">3</button></td>
+            <td><button class="jump">4</button></td>
+          </tr>
+        </table>
+      </div>
     </div>
-  </div>
 </div>
 
 <!-- Footer -->
