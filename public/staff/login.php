@@ -34,14 +34,14 @@ if(is_post_request() && request_is_same_domain()) {
 <div id="main-content">
     <a href="../index.php">Home</a><br />
 
-    <h1>Existing User</h1>
+    <h1>Welcome back!</h1>
 
     <?php echo display_errors($errors); ?>
 
     <form action="signup.php" method="post">
         <?php echo csrf_token_tag(); ?>
         Email:<br />
-        <input type="text" name="email" value="<?php echo h($organization['email']); ?>" /><br />
+        <input type="text" name="email" placeholder="Enter the organization email" value="<?php echo h($organization['email']); ?>" /><br />
         Password:<br />
         <input type="password" name="password" value="" /><br />
         <input type="submit" name="submit" value="Login" />
