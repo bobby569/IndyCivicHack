@@ -1,5 +1,5 @@
 <?php
-require_once('../../private/initialize.php');
+require_once('../../../private/initialize.php');
 $page_title = 'Individual Registration';
 include(SHARED_PATH . '/header.php');
 ?>
@@ -8,7 +8,7 @@ include(SHARED_PATH . '/header.php');
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-left">
-      <h1>User Registration</h1>
+      <h1>Participant Registration</h1>
       <div>
         <form id="individual">
             <p>
@@ -30,17 +30,9 @@ include(SHARED_PATH . '/header.php');
               </label>
             </p>
             <p>
-                Group
-                <input type="radio" id="participant" value="group" name="group">
-                Individual
-                <input type="radio" id="participant" value="individual" name="individual" onclick="">
-
-            </p>
-            <p>
-              <label>
-                Time:
-                <input autofocus required placeholder="Enter time here" type="time">
-              </label>
+                <p>What are you?</p>
+                <input type="radio" name="idSelection" value="individual"> I am an Individual<br>
+                <input type="radio" name="idSelection" value="organizer"> I am an Organizer<br>
             </p>
             <p>
               <label>
