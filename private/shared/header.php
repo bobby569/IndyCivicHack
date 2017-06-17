@@ -18,4 +18,4 @@ if(!isset($page_title)) {
   </head>
   <body>
 
-  <?php include('./nav.php') ?>
+  <?php include(SHARED_PATH . '/nav.php') ?>

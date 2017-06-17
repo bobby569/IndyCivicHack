@@ -1,6 +1,6 @@
 <?php
 require_once('../../private/initialize.php');
-$page_title = 'Organization Registration';
+$page_title = 'Individual Registration';
 include(SHARED_PATH . '/header.php');
 ?>
 
