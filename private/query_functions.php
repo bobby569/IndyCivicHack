@@ -7,7 +7,7 @@
  */
  //UPDATE ORGANISATION TABLE:NUMBER OF SPOTS,
  //List all events that organizer will be hosting
- function find_all_current-events() {
+ function find_all_current_events() {
    global $db;
    $sql = "SELECT * FROM countries ";
    $sql .= "ORDER BY name ASC;";
