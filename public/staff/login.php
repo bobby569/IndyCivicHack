@@ -32,7 +32,7 @@ if(is_post_request() && request_is_same_domain()) {
 <?php include(SHARED_PATH . '/header.php') ?>
 
 <div id="main-content">
-    <a href="../index.php">Home</a><br />
+    <a href="../index.php">Home</a><br><br>
 
     <h1>Welcome back!</h1>
 

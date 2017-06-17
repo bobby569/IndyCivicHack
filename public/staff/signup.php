@@ -47,33 +47,38 @@ if(is_post_request() && request_is_same_domain()) {
 
 <?php $page_title = 'Organization Sign-up'; ?>
 <?php include(SHARED_PATH . '/header.php') ?>
+<?php include 'validation_functions.php'; ?>
 
 <div id="main-content">
-    <a href="../index.php">Home</a><br />
+    <a href="../index.php">Home</a><br><br>
 
     <h1>Welcome!</h1>
     <h4>New Organization Sign Up</h4>
 
     <?php echo display_errors($errors); ?>
 
-    <form action="signup.php" method="post">
+    <form action="signup.php" method="post" onsubmit="alert("Test");">
         <?php echo csrf_token_tag(); ?>
         Email:<br />
-        <input type="text" name="email" value="<?php echo h($organization['email']); ?>" /><br />
+        <input autofocus required type="text" name="email" value="<?php echo h($organization['email']); ?>" /><br />
         Password:<br />
-        <input type="password" name="password" value="" /><br />
+        <input autofocus required type="password" name="password" value="" /><br />
         Confirm Password:<br />
-        <input type="password" name="password_confirm" value="" /><br />
+        <input autofocus required type="password" name="password_confirm" value="" /><br />
         Name:<br />
-        <input type="text" name="name" value="<?php echo h($organization['name']); ?>" /><br />
+        <input autofocus required type="text" name="name" value="<?php echo h($organization['name']); ?>" /><br />
         Website:<br />
-        <input type="text" name="website" value="<?php echo h($organization['website']); ?>" /><br />
+        <input autofocus required type="text" name="website" value="<?php echo h($organization['website']); ?>" /><br />
         Address:<br />
-        <input type="text" name="address" value="<?php echo h($organization['address']); ?>" /><br />
+        <input autofocus required type="text" name="address" value="<?php echo h($organization['address']); ?>" /><br />
         <br />
         <input type="submit" name="submit" value="Create" />
     </form>
-
 </div>
+<?php
+    function foo() {
+        alert("test");
+    }
+?>
 
 <?php include(SHARED_PATH . '/footer.php'); ?>
