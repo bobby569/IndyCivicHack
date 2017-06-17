@@ -70,10 +70,13 @@ td {
               </label>
             </p>
             <p>
-                Group
-                <input type="radio" id="participant" value="group" name="group">
                 Individual
-                <input type="radio" id="participant" value="individual" name="individual" onclick="">
+                <input type="radio" id="individual" value="group" name="participant">
+                Group
+                <input type="radio" id="group" value="group" name="participant" onclick ="radioFunction()">
+                <p>
+                  <input type="number" id="number" name="number" disabled>
+                </p>
 
             </p>
             <p>
