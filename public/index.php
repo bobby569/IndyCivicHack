@@ -48,8 +48,8 @@ include(SHARED_PATH . '/header.php');
         <tr>
           <td>
             <div class="gallery">
-              <a target="_blank">
-                <img src="./photos/1.jpg" class="fade_open" height="150" width="150">
+              <a target="_blank" class="fade_open">
+                <img src="./photos/1.jpg" height="150" width="150">
               </a>
               <div class="desc">Volunteer Event</div>
             </div>
@@ -137,6 +137,15 @@ include(SHARED_PATH . '/header.php');
           </tr>
         </table>
       </div>
+
+      <div id="fade" class="well">
+          <h4>Fade example</h4>
+      <pre class="prettyprint">
+      <!--  Info about event -->
+      </pre>
+          <!-- Add an optional button to close the popup -->
+          <button class="fade_close btn btn-default">Close</button>
+    </div>
     </div>
 </div>
 
