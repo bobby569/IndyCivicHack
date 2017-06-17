@@ -7,7 +7,7 @@ if(!isset($page_title)) {
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>BMDConnect</title>
+    <title><?php echo h($page_title); ?></title>
     <meta charset="utf-8">
     <meta name="description" content="<?php echo h($page_title); ?>">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -17,3 +17,5 @@ if(!isset($page_title)) {
     <link rel="stylesheet" href="../../private/css/style.css">
   </head>
   <body>
+
+  <?php include(SHARED_PATH . '/nav.php') ?>
