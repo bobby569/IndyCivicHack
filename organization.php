@@ -32,7 +32,7 @@ td {
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-center w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <!--<a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>-->
     <a href="index.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Us</a>
-    <a href="individual.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sign Up / Login</a>
+    <a href="organization.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sign Up / Login</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Donations</a>
   </div>
 
@@ -82,8 +82,8 @@ td {
             </p>
             <p>
               <label>
-                Spots left:
-                <input autofocus required placeholder= "Enter how many spots left here" type="number">
+                Number of Participants/Volunteers:
+                <input autofocus required placeholder= "Enter number of participants/volunteers" type="number">
               </label>
             </p>
             <button class="w3-right">Submit</button>
