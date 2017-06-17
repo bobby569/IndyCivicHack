@@ -1,6 +1,8 @@
-<?php require_once('../private/initialize.php') ?>
-
-<?php include(SHARED_PATH . '/header.php'); ?>
+<?php
+require_once('../private/initialize.php');
+$page_title = 'BMDConnect';
+include(SHARED_PATH . '/header.php');
+?>
 
 <!-- Navbar -->
 <div class="w3-top">
@@ -8,7 +10,7 @@
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-center w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <!--<a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>-->
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Us</a>
-    <a href="./individual.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sign Up / Login</a>
+    <a href="./staff/login.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sign Up / Login</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Donations</a>
   </div>
 
@@ -45,9 +47,6 @@
         </tr>
       </table>
     </div>
-    <!--<div class="w3-third w3-center">
-      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
-    </div>-->
   </div>
 </div>
 
