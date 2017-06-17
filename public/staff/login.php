@@ -60,8 +60,8 @@ include(SHARED_PATH . '/header.php');
                     </p>
                     <p>
                         <label>
-                            Spots left:
-                            <input autofocus required placeholder= "Enter how many spots left here" type="number">
+                            Number of Participants/Volunteers:
+                            <input autofocus required placeholder= "Enter number of participants/volunteers" type="number">
                         </label>
                     </p>
                     <button class="w3-right">Submit</button>
