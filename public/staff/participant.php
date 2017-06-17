@@ -30,17 +30,9 @@ include(SHARED_PATH . '/header.php');
               </label>
             </p>
             <p>
-                Group
-                <input type="radio" id="participant" value="group" name="group">
-                Individual
-                <input type="radio" id="participant" value="individual" name="individual" onclick="">
-
-            </p>
-            <p>
-              <label>
-                Time:
-                <input autofocus required placeholder="Enter time here" type="time">
-              </label>
+                <p>What are you?</p>
+                <input type="radio" name="idSelection" value="individual"> I am an Individual<br>
+                <input type="radio" name="idSelection" value="organizer"> I am an Organizer<br>
             </p>
             <p>
               <label>
