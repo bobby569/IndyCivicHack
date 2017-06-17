@@ -10,6 +10,17 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Include jQuery Popup Overlay -->
+    <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
+    <script>
+      $(document).ready(function() {
+
+        // Initialize the plugin
+        $('#fade').popup();
+
+      });
+    </script>
+
     <script src="https://unpkg.com/vue"></script>
     <script src="../../private/js/script.js"></script>
   </body>
