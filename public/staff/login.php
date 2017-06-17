@@ -1,58 +1,54 @@
 <?php
 require_once('../../private/initialize.php');
-$page_title = 'Registration';
-include(SHARED_PATH . '/header.php');
+require_login();
+
+$errors = array();
+$organization = array(
+    'email' => '',
+    'password' => '',
+);
+
+if(is_post_request() && request_is_same_domain()) {
+    ensure_csrf_token_valid();
+
+    // Confirm that values are present before accessing them
+    if (isset($_POST['email'])) {
+        $organization['email'] = $_POST['email'];
+    }
+    if (isset($_POST['password'])) {
+        $organization['password'] = $_POST['password'];
+    }
+
+    $result = insert_user($organization);
+    if($result === true) {
+        $new_id = db_insert_id($db);
+        redirect_to('show.php?id=' . $new_id);
+    } else {
+        $errors = $result;
+    }
+
+}
 ?>
 
+<?php $page_title = 'Organization Login'; ?>
+<?php include(SHARED_PATH . '/staff_header.php') ?>
 
-<!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
-    <div class="w3-content">
-        <div class="w3-left">
-            <h1>Organization Registration</h1>
-            <div>
-                <form id="individual">
-                    <p>
-                        <label>
-                            Title:
-                            <input autofocus required placeholder="Enter title here" type="text">
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            Summary:
-                            <textarea autofocus required placeholder="Enter summary here" rows="4" cols="50"></textarea>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            Image:
-                            <input autofocus required placeholder="Enter image" type="file">
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            Location:
-                            <input autofocus required placeholder="Enter location here" type="text"></label>
-                    </p>
-                    <p>
-                        <label>
-                            Time:
-                            <input autofocus required placeholder="Enter time here" type="time">
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            Number of Participants/Volunteers:
-                            <input autofocus required placeholder= "Enter number of participants/volunteers" type="number">
-                        </label>
-                    </p>
-                    <button class="w3-right">Submit</button>
-                </form>
-            </div>
-        </div>
-    </div>
+<div id="main-content">
+    <a href="../index.php">Home</a><br />
+
+    <h1>Existing User</h1>
+
+    <?php echo display_errors($errors); ?>
+
+    <form action="signup.php" method="post">
+        <?php echo csrf_token_tag(); ?>
+        Username/Email:<br />
+        <input type="text" name="username/email" value="<?php echo h($organization['email']); ?>" /><br />
+        Password:<br />
+        <input type="password" name="password" value="" /><br />
+        <input type="submit" name="submit" value="Login" />
+    </form>
+
 </div>
 
-<!-- Footer -->
-<?php include(SHARED_PATH . './footer.php'); ?>
+<?php include(SHARED_PATH . '/footer.php'); ?>
