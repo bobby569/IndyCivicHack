@@ -1,5 +1,5 @@
 <?php
-require_once('../../private/initialize.php');
+require_once('../../../private/initialize.php');
 $page_title = 'Event Creation';
 include(SHARED_PATH . '/header.php');
 ?>
