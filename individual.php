@@ -11,7 +11,7 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
-input[type=text], input[type=time], input[type=number], textarea {
+input[type=text], input[type=time], input[type=number], input[type=file], textarea {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -66,7 +66,7 @@ td {
             <p>
               <label>
                 Image:
-                <input autofocus required placeholder="Enter image" type="text">
+                <input autofocus required placeholder="Enter image" type="file">
               </label>
             </p>
             <p>
