@@ -48,7 +48,7 @@ td {
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-left">
-      <h1>Individual Registration</h1>
+      <h1>Organization Registration</h1>
       <div>
         <form id="individual">
             <p>
